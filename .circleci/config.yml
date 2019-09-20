@@ -6,6 +6,7 @@ jobs:
     docker:
       - image: circleci/python:latest
 
-    - checkout
+    steps:
+      - checkout
 
-    - run: ./test/run_tests.sh
+      - run: ./test/run_tests.sh
