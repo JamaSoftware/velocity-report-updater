@@ -9,4 +9,10 @@ jobs:
     steps:
       - checkout
 
-      - run: ./test/run_tests.sh
+      - run:
+          name: Test
+          command: ./test/run_tests.sh
+
+      - run:
+          name: Lint
+          command: sudo apt-get install shellcheck && shellcheck $(find . -iname '*.sh') --exclude SC2162,SC1117
