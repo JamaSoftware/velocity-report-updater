@@ -4,11 +4,13 @@ cd "$BASEDIR" || exit
 
 
 # make a temp dir and copy the input file to it
-TEMPFILE=$(mktemp -d 2>/dev/null || mktemp -d -t "test_dir")
-cp ./input.vm "$TEMPFILE"/input.vm
+TEMPDIR=$(mktemp -d 2>/dev/null || mktemp -d -t "test_dir")
+cp ./input.vm "$TEMPDIR"/input.vm
 
 # run the script we want to test
-yes | ../report-updater.sh "$TEMPFILE"
+yes | ../report-updater.sh "$TEMPDIR"
 
 # check if the output matches what we expected
-diff --side-by-side --width "$(tput cols)" "$TEMPFILE"/input.vm ./output.vm
+diff --side-by-side "$TEMPDIR"/input.vm ./output.vm
+
+rm -rf "$TEMPDIR"
