@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/project
+
+    docker:
+      - image: circleci/python:latest
+
+    - checkout
+
+    - run: ./test/run_tests.sh
