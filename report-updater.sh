@@ -23,17 +23,16 @@ done
 
 REPLACE=$(cat <<REPLACEMENT_EXPRS
 s/applicationContext.getBean\("aclManager"\)/adminSource/g;
+s/applicationContext.getBean\("aclPermissionEntryDao"\)/adminSource/g;
 s/applicationContext.getBean\("aclService"\)/adminSource/g;
-s/applicationContext.getBean\("dwrLicenseService"\)/adminSource/g;
-s/applicationContext.getBean\("attachmentService"\)/documentSource/g;
 s/applicationContext.getBean\("attachmentDao"\)/documentSource/g;
+s/applicationContext.getBean\("attachmentService"\)/documentSource/g;
 s/applicationContext.getBean\("baseLineDao"\)/baselineSource/g;
 s/applicationContext.getBean\("baseLineService"\)/baselineSource/g;
 s/applicationContext.getBean\("commentDao"\)/commentSource/g;
 s/applicationContext.getBean\("contourItemDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentFieldDao"\)/documentSource/g;
-s/applicationContext.getBean\("document_UrlDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentNodeDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentNodeManager"\)/documentSource/g;
 s/applicationContext.getBean\("documentNodeService"\)/documentSource/g;
@@ -41,6 +40,8 @@ s/applicationContext.getBean\("documentService"\)/documentSource/g;
 s/applicationContext.getBean\("documentTypeDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentTypeFieldDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentTypeService"\)/documentSource/g;
+s/applicationContext.getBean\("document_UrlDao"\)/documentSource/g;
+s/applicationContext.getBean\("dwrLicenseService"\)/adminSource/g;
 s/applicationContext.getBean\("eventLogDao"\)/eventSource/g;
 s/applicationContext.getBean\("filterDao"\)/filterSource/g;
 s/applicationContext.getBean\("legacyDocumentNodeManager"\)/documentSource/g;
@@ -66,12 +67,12 @@ s/applicationContext.getBean\("tagDao"\)/documentSource/g;
 s/applicationContext.getBean\("testCycleDao"\)/testSource/g;
 s/applicationContext.getBean\("testPlanDao"\)/testSource/g;
 s/applicationContext.getBean\("testRunDao"\)/testSource/g;
+s/applicationContext.getBean\("testRunSetDao"\)/testSource/g;
 s/applicationContext.getBean\("testSetDao"\)/testSource/g;
 s/applicationContext.getBean\("userDao"\)/userSource/g;
+s/applicationContext.getBean\("userLogEntryDao"\)/userSource/g;
 s/applicationContext.getBean\("userService"\)/userSource/g;
 s/applicationContext.getBean\("versionDao"\)/documentSource/g;
-s/applicationContext.getBean\("userLogEntryDao"\)/userSource/g;
-s/applicationContext.getBean\("testRunSetDao"\)/testSource/g;
 s/velocityServiceWrapper.getItem/documentSource.getItem/g;
 s/velocityServiceWrapper.getRelationships/documentSource.getRelationships/g;
 REPLACEMENT_EXPRS

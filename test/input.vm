@@ -1,4 +1,5 @@
 $applicationContext.getBean("aclManager")
+$applicationContext.getBean("aclPermissionEntryDao")
 $applicationContext.getBean("aclService")
 $applicationContext.getBean("dwrLicenseService")
 $applicationContext.getBean("attachmentService")
