@@ -19,12 +19,12 @@ yes | ../report-updater.sh "$TEMPDIR"
 INPUT="$TEMPDIR"/file_mutated_by_tests.vm
 OUTPUT=./expected_output.vm
 
-echo $BLUE"INPUT:                                                          OUTPUT:"$NORMAL
+echo "$BLUE""INPUT:                                                          OUTPUT:$NORMAL"
 if diff --side-by-side "$INPUT" "$OUTPUT" ; then
     rm -rf "$TEMPDIR"
-    echo $GREEN"TESTS PASS"
+    echo "$GREEN""TESTS PASS"
 else
     rm -rf "$TEMPDIR"
-    echo $RED"TESTS FAIL"
+    echo "$RED""TESTS FAIL"
     exit 1
 fi
