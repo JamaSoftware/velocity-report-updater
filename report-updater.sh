@@ -23,6 +23,7 @@ done
 
 REPLACE=$(cat <<REPLACEMENT_EXPRS
 s/applicationContext.getBean\("aclManager"\)/adminSource/g;
+s/applicationContext.getBean\("aclPermissionEntryDao"\)/adminSource/g;
 s/applicationContext.getBean\("aclService"\)/adminSource/g;
 s/applicationContext.getBean\("attachmentDao"\)/documentSource/g;
 s/applicationContext.getBean\("attachmentService"\)/documentSource/g;
