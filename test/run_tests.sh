@@ -8,13 +8,13 @@ GREEN='\033[0;32m'
 
 # make a temp dir and copy the input file to it
 TEMPDIR=$(mktemp -d 2>/dev/null || mktemp -d -t "test_dir")
-cp ./input.vm "$TEMPDIR"/input.vm
+cp ./input.vm "$TEMPDIR"/file_mutated_by_tests.vm
 
 # run the script we want to test
 yes | ../report-updater.sh "$TEMPDIR"
 
 # check if the output matches what we expected
-if diff --side-by-side "$TEMPDIR"/input.vm ./output.vm; then
+if diff --side-by-side "$TEMPDIR"/file_mutated_by_tests.vm ./expected_output.vm; then
     rm -rf "$TEMPDIR"
     echo $GREEN"passed"
 else
