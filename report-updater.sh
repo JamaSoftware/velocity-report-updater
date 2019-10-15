@@ -33,6 +33,7 @@ s/applicationContext.getBean\("commentDao"\)/commentSource/g;
 s/applicationContext.getBean\("contourItemDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentFieldDao"\)/documentSource/g;
+s/applicationContext.getBean\("documentGroupDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentNodeDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentNodeManager"\)/documentSource/g;
 s/applicationContext.getBean\("documentNodeService"\)/documentSource/g;
