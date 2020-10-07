@@ -29,6 +29,7 @@ s/applicationContext.getBean\("attachmentDao"\)/documentSource/g;
 s/applicationContext.getBean\("attachmentService"\)/documentSource/g;
 s/applicationContext.getBean\("baseLineDao"\)/baselineSource/g;
 s/applicationContext.getBean\("baseLineService"\)/baselineSource/g;
+s/applicationContext.getBean\("changeRequestAssociationDao"\)/documentSource/g;
 s/applicationContext.getBean\("commentDao"\)/commentSource/g;
 s/applicationContext.getBean\("contourItemDao"\)/documentSource/g;
 s/applicationContext.getBean\("documentDao"\)/documentSource/g;
