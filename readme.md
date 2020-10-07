@@ -1,6 +1,4 @@
 # Report Updater
-[![CircleCI](https://circleci.com/gh/JamaSoftware/velocity-report-updater.svg?style=svg)](https://circleci.com/gh/JamaSoftware/velocity-report-updater)
-
 This repository contains a script to automate the updating of existing Velocity report templates to use the correct references defined on the context.
 
 The `applicationContext` is no longer avalible to templates, and a corresponding "source" should be used depending on what data the report needs to access.
